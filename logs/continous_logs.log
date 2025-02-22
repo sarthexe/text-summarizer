@@ -1,0 +1,57 @@
+[2025-02-18 19:26:54,838: INFO: main: Logging is implemented]
+[2025-02-22 12:05:27,677: INFO: main: stageData Ingestion Stage initiated]
+[2025-02-22 12:05:27,684: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-22 12:05:27,684: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-22 12:05:27,684: ERROR: main: Yaml file is empty]
+Traceback (most recent call last):
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\utils\common.py", line 16, in read_yaml
+    return ConfigBox(content)
+           ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 259, in __init__
+    raise BoxValueError("First argument must be mapping or iterable")
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sarthak\textsummarizer\main.py", line 9, in <module>
+    data_ingestion_pipeline.initiate_data_ingestion()
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\pipeline\data_ingestion1.py", line 11, in initiate_data_ingestion
+    config=ConfigurationManager()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\config\configuration.py", line 10, in __init__
+    self.params=read_yaml(params_filepath)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\ensure\main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\utils\common.py", line 18, in read_yaml
+    raise ValueError("Yaml file is empty")
+ValueError: Yaml file is empty
+[2025-02-22 12:05:46,044: INFO: main: stageData Ingestion Stage initiated]
+[2025-02-22 12:05:46,044: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-22 12:05:46,052: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-22 12:05:46,052: INFO: common: created directories at: artifacts]
+[2025-02-22 12:05:46,055: INFO: common: created directories at: artifacts/data_ingestion]
+[2025-02-22 12:05:46,888: INFO: data_ingestion: File is downloaded]
+[2025-02-22 12:05:47,610: ERROR: main: File is not a zip file]
+Traceback (most recent call last):
+  File "C:\Users\Sarthak\textsummarizer\main.py", line 9, in <module>
+    data_ingestion_pipeline.initiate_data_ingestion()
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\pipeline\data_ingestion1.py", line 16, in initiate_data_ingestion
+    data_ingestion.extract_file()
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\components\data_ingestion.py", line 25, in extract_file
+    with zipfile.ZipFile(self.config.local_data_file,'r') as zip_ref:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\zipfile\__init__.py", line 1349, in __init__
+    self._RealGetContents()
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\zipfile\__init__.py", line 1416, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2025-02-22 12:07:04,258: INFO: main: stageData Ingestion Stage initiated]
+[2025-02-22 12:07:04,258: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-22 12:07:04,258: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-22 12:07:04,258: INFO: common: created directories at: artifacts]
+[2025-02-22 12:07:04,258: INFO: common: created directories at: artifacts/data_ingestion]
+[2025-02-22 12:07:06,270: INFO: data_ingestion: File is downloaded]
+[2025-02-22 12:07:06,388: INFO: main: Stage Data Ingestion Stage Completed]
