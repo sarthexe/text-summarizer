@@ -55,3 +55,258 @@ zipfile.BadZipFile: File is not a zip file
 [2025-02-22 12:07:04,258: INFO: common: created directories at: artifacts/data_ingestion]
 [2025-02-22 12:07:06,270: INFO: data_ingestion: File is downloaded]
 [2025-02-22 12:07:06,388: INFO: main: Stage Data Ingestion Stage Completed]
+[2025-02-22 13:44:03,177: INFO: config: PyTorch version 2.6.0 available.]
+[2025-02-22 13:44:04,545: INFO: main: stageData Ingestion Stage initiated]
+[2025-02-22 13:44:04,555: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-22 13:44:04,562: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-22 13:44:04,562: INFO: common: created directories at: artifacts]
+[2025-02-22 13:44:04,562: INFO: common: created directories at: artifacts/data_ingestion]
+[2025-02-22 13:44:06,180: INFO: data_ingestion: File is downloaded]
+[2025-02-22 13:44:06,299: INFO: main: Stage Data Ingestion Stage Completed]
+[2025-02-22 13:44:06,299: INFO: main: stage Data Transformation Stage initiated]
+[2025-02-22 13:44:06,299: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-22 13:44:06,305: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-22 13:44:06,305: INFO: common: created directories at: artifacts]
+[2025-02-22 13:44:06,306: ERROR: main: "'ConfigBox' object has no attribute 'data_transformation'"]
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'data_transformation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'data_transformation'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'data_transformation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_transformation'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'data_transformation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'data_transformation'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'data_transformation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sarthak\textsummarizer\main.py", line 23, in <module>
+    data_transformation_pipeline.initiate_data_transformation()
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\pipeline\data_transformation2.py", line 11, in initiate_data_transformation
+    data_transformation_config=config.get_data_tranformation_config()
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\config\configuration.py", line 28, in get_data_tranformation_config
+    config=self.config.data_transformation
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_transformation'"
+[2025-02-22 13:47:35,115: INFO: config: PyTorch version 2.6.0 available.]
+[2025-02-22 13:47:35,723: INFO: main: stageData Ingestion Stage initiated]
+[2025-02-22 13:47:35,730: ERROR: main: while scanning a simple key
+  in "config\config.yaml", line 13, column 3
+could not find expected ':'
+  in "config\config.yaml", line 13, column 46]
+Traceback (most recent call last):
+  File "C:\Users\Sarthak\textsummarizer\main.py", line 10, in <module>
+    data_ingestion_pipeline.initiate_data_ingestion()
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\pipeline\data_ingestion1.py", line 11, in initiate_data_ingestion
+    config=ConfigurationManager()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\config\configuration.py", line 9, in __init__
+    self.config=read_yaml(config_path)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\ensure\main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\utils\common.py", line 20, in read_yaml
+    raise e
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\utils\common.py", line 14, in read_yaml
+    content= yaml.safe_load(yaml_file)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\yaml\__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\yaml\__init__.py", line 81, in load
+    return loader.get_single_data()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\yaml\constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\yaml\composer.py", line 36, in get_single_node
+    document = self.compose_document()
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\yaml\composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\yaml\composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\yaml\parser.py", line 98, in check_event
+    self.current_event = self.state()
+                         ^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\yaml\parser.py", line 428, in parse_block_mapping_key
+    if self.check_token(KeyToken):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\yaml\scanner.py", line 116, in check_token
+    self.fetch_more_tokens()
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\yaml\scanner.py", line 173, in fetch_more_tokens
+    return self.fetch_stream_end()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\yaml\scanner.py", line 377, in fetch_stream_end
+    self.remove_possible_simple_key()
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\yaml\scanner.py", line 318, in remove_possible_simple_key
+    raise ScannerError("while scanning a simple key", key.mark,
+yaml.scanner.ScannerError: while scanning a simple key
+  in "config\config.yaml", line 13, column 3
+could not find expected ':'
+  in "config\config.yaml", line 13, column 46
+[2025-02-22 13:48:07,909: INFO: config: PyTorch version 2.6.0 available.]
+[2025-02-22 13:48:08,525: INFO: main: stageData Ingestion Stage initiated]
+[2025-02-22 13:48:08,536: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-22 13:48:08,536: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-22 13:48:08,539: INFO: common: created directories at: artifacts]
+[2025-02-22 13:48:08,540: INFO: common: created directories at: artifacts/data_ingestion]
+[2025-02-22 13:48:09,829: INFO: data_ingestion: File is downloaded]
+[2025-02-22 13:48:09,929: INFO: main: Stage Data Ingestion Stage Completed]
+[2025-02-22 13:48:09,929: INFO: main: stage Data Transformation Stage initiated]
+[2025-02-22 13:48:09,929: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-22 13:48:09,929: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-22 13:48:09,929: INFO: common: created directories at: artifacts]
+[2025-02-22 13:48:09,929: INFO: common: created directories at: artifacts/data_transformation]
+[2025-02-22 13:48:10,183: ERROR: main: google/pegasus-cnn-dailymail is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`]
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\huggingface_hub\utils\_http.py", line 406, in hf_raise_for_status
+    response.raise_for_status()
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://huggingface.co/google/pegasus-cnn-dailymail/resolve/main/tokenizer_config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\transformers\utils\hub.py", line 342, in cached_file
+    resolved_file = hf_hub_download(
+                    ^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\huggingface_hub\file_download.py", line 860, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\huggingface_hub\file_download.py", line 967, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\huggingface_hub\file_download.py", line 1482, in _raise_on_head_call_error
+    raise head_call_error
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\huggingface_hub\file_download.py", line 1374, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\huggingface_hub\file_download.py", line 1294, in get_hf_file_metadata
+    r = _request_wrapper(
+        ^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\huggingface_hub\file_download.py", line 278, in _request_wrapper
+    response = _request_wrapper(
+               ^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\huggingface_hub\file_download.py", line 302, in _request_wrapper
+    hf_raise_for_status(response)
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\huggingface_hub\utils\_http.py", line 454, in hf_raise_for_status
+    raise _format(RepositoryNotFoundError, message, response) from e
+huggingface_hub.errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-67b98842-4210fcb563297cb152cf0722;fa24aca7-643c-4e60-8962-fcd0917a151c)
+
+Repository Not Found for url: https://huggingface.co/google/pegasus-cnn-dailymail/resolve/main/tokenizer_config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated.
+Invalid username or password.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sarthak\textsummarizer\main.py", line 23, in <module>
+    data_transformation_pipeline.initiate_data_transformation()
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\pipeline\data_transformation2.py", line 12, in initiate_data_transformation
+    data_transformation=DataTransformation(config=data_transformation_config)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\components\data_transformation.py", line 11, in __init__
+    self.tokenizer=AutoTokenizer.from_pretrained(config.tokenizer_name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\transformers\models\auto\tokenization_auto.py", line 881, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\transformers\models\auto\tokenization_auto.py", line 713, in get_tokenizer_config
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\transformers\utils\hub.py", line 365, in cached_file
+    raise EnvironmentError(
+OSError: google/pegasus-cnn-dailymail is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+[2025-02-22 13:49:22,014: INFO: config: PyTorch version 2.6.0 available.]
+[2025-02-22 13:49:22,634: INFO: main: stageData Ingestion Stage initiated]
+[2025-02-22 13:49:22,636: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-22 13:49:22,636: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-22 13:49:22,636: INFO: common: created directories at: artifacts]
+[2025-02-22 13:49:22,636: INFO: common: created directories at: artifacts/data_ingestion]
+[2025-02-22 13:49:22,636: INFO: data_ingestion: File already exists]
+[2025-02-22 13:49:22,732: INFO: main: Stage Data Ingestion Stage Completed]
+[2025-02-22 13:49:22,734: INFO: main: stage Data Transformation Stage initiated]
+[2025-02-22 13:49:22,734: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-22 13:49:22,736: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-22 13:49:22,736: INFO: common: created directories at: artifacts]
+[2025-02-22 13:49:22,736: INFO: common: created directories at: artifacts/data_transformation]
+[2025-02-22 13:49:29,614: INFO: main: Stage Data Transformation Stage]
