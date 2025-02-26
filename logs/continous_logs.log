@@ -310,3 +310,353 @@ If this is a private repository, make sure to pass a token having permission to 
 [2025-02-22 13:49:22,736: INFO: common: created directories at: artifacts]
 [2025-02-22 13:49:22,736: INFO: common: created directories at: artifacts/data_transformation]
 [2025-02-22 13:49:29,614: INFO: main: Stage Data Transformation Stage]
+[2025-02-26 14:35:12,617: INFO: config: PyTorch version 2.6.0 available.]
+[2025-02-26 14:35:14,315: INFO: main: stageData Ingestion Stage initiated]
+[2025-02-26 14:35:14,324: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-26 14:35:14,333: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-26 14:35:14,333: INFO: common: created directories at: artifacts]
+[2025-02-26 14:35:14,333: INFO: common: created directories at: artifacts/data_ingestion]
+[2025-02-26 14:35:14,333: INFO: data_ingestion: File already exists]
+[2025-02-26 14:35:14,452: INFO: main: Stage Data Ingestion Stage Completed]
+[2025-02-26 14:35:14,463: INFO: main: stage Data Transformation Stage initiated]
+[2025-02-26 14:35:14,463: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-26 14:35:14,463: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-26 14:35:14,466: INFO: common: created directories at: artifacts]
+[2025-02-26 14:35:14,466: INFO: common: created directories at: artifacts/data_transformation]
+[2025-02-26 14:35:16,463: INFO: main: Stage Data Transformation Stage]
+[2025-02-26 14:35:16,463: INFO: main: stage Model Trainer Stage initiated]
+[2025-02-26 14:35:16,465: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-26 14:35:16,466: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-26 14:35:16,466: INFO: common: created directories at: artifacts]
+[2025-02-26 14:35:16,467: INFO: common: created directories at: artifacts/model_trainer]
+[2025-02-26 14:35:16,467: ERROR: main: "'ConfigBox' object has no attribute 'gradient_accumulation_steps'"]
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'gradient_accumulation_steps'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'gradient_accumulation_steps'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'gradient_accumulation_steps'. Did you mean: 'gradient_accumualation_steps'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'gradient_accumulation_steps'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'gradient_accumulation_steps'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'gradient_accumulation_steps'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'gradient_accumulation_steps'. Did you mean: 'gradient_accumualation_steps'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sarthak\textsummarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\pipeline\model_trainer3.py", line 11, in initiate_model_trainer
+    model_trainer_config=config.get_model_trainer_config()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\config\configuration.py", line 57, in get_model_trainer_config
+    gradient_accumulation_steps= params.gradient_accumulation_steps,
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'gradient_accumulation_steps'". Did you mean: 'gradient_accumualation_steps'?
+[2025-02-26 14:37:12,759: INFO: config: PyTorch version 2.6.0 available.]
+[2025-02-26 14:37:13,670: INFO: main: stageData Ingestion Stage initiated]
+[2025-02-26 14:37:13,673: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-26 14:37:13,673: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-26 14:37:13,673: INFO: common: created directories at: artifacts]
+[2025-02-26 14:37:13,673: INFO: common: created directories at: artifacts/data_ingestion]
+[2025-02-26 14:37:13,673: INFO: data_ingestion: File already exists]
+[2025-02-26 14:37:13,785: INFO: main: Stage Data Ingestion Stage Completed]
+[2025-02-26 14:37:13,785: INFO: main: stage Data Transformation Stage initiated]
+[2025-02-26 14:37:13,788: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-26 14:37:13,788: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-26 14:37:13,788: INFO: common: created directories at: artifacts]
+[2025-02-26 14:37:13,788: INFO: common: created directories at: artifacts/data_transformation]
+[2025-02-26 14:37:15,607: INFO: main: Stage Data Transformation Stage]
+[2025-02-26 14:37:15,608: INFO: main: stage Model Trainer Stage initiated]
+[2025-02-26 14:37:15,609: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-26 14:37:15,610: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-26 14:37:15,611: INFO: common: created directories at: artifacts]
+[2025-02-26 14:37:15,611: INFO: common: created directories at: artifacts/model_trainer]
+[2025-02-26 14:37:15,612: ERROR: main: "'ConfigBox' object has no attribute 'gradient_accumulation_steps'"]
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'gradient_accumulation_steps'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'gradient_accumulation_steps'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'gradient_accumulation_steps'. Did you mean: 'gradient_accumualation_steps'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'gradient_accumulation_steps'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'gradient_accumulation_steps'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'gradient_accumulation_steps'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'gradient_accumulation_steps'. Did you mean: 'gradient_accumualation_steps'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sarthak\textsummarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\pipeline\model_trainer3.py", line 11, in initiate_model_trainer
+    model_trainer_config=config.get_model_trainer_config()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\config\configuration.py", line 57, in get_model_trainer_config
+    gradient_accumulation_steps= params.gradient_accumulation_steps,
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'gradient_accumulation_steps'". Did you mean: 'gradient_accumualation_steps'?
+[2025-02-26 14:37:37,532: INFO: config: PyTorch version 2.6.0 available.]
+[2025-02-26 14:37:38,413: INFO: main: stageData Ingestion Stage initiated]
+[2025-02-26 14:37:38,413: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-26 14:37:38,417: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-26 14:37:38,417: INFO: common: created directories at: artifacts]
+[2025-02-26 14:37:38,417: INFO: common: created directories at: artifacts/data_ingestion]
+[2025-02-26 14:37:38,417: INFO: data_ingestion: File already exists]
+[2025-02-26 14:37:38,527: INFO: main: Stage Data Ingestion Stage Completed]
+[2025-02-26 14:37:38,527: INFO: main: stage Data Transformation Stage initiated]
+[2025-02-26 14:37:38,527: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-26 14:37:38,527: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-26 14:37:38,527: INFO: common: created directories at: artifacts]
+[2025-02-26 14:37:38,527: INFO: common: created directories at: artifacts/data_transformation]
+[2025-02-26 14:37:40,130: INFO: main: Stage Data Transformation Stage]
+[2025-02-26 14:37:40,131: INFO: main: stage Model Trainer Stage initiated]
+[2025-02-26 14:37:40,132: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-26 14:37:40,134: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-26 14:37:40,135: INFO: common: created directories at: artifacts]
+[2025-02-26 14:37:40,135: INFO: common: created directories at: artifacts/model_trainer]
+[2025-02-26 14:37:40,136: ERROR: main: "'ConfigBox' object has no attribute 'gradient_accumulation_steps'"]
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'gradient_accumulation_steps'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'gradient_accumulation_steps'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'gradient_accumulation_steps'. Did you mean: 'gradient_accumualation_steps'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'gradient_accumulation_steps'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'gradient_accumulation_steps'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'gradient_accumulation_steps'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'gradient_accumulation_steps'. Did you mean: 'gradient_accumualation_steps'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sarthak\textsummarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\pipeline\model_trainer3.py", line 11, in initiate_model_trainer
+    model_trainer_config=config.get_model_trainer_config()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\config\configuration.py", line 57, in get_model_trainer_config
+    gradient_accumulation_steps= params.gradient_accumulation_steps,
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'gradient_accumulation_steps'". Did you mean: 'gradient_accumualation_steps'?
+[2025-02-26 14:42:43,183: INFO: config: PyTorch version 2.6.0 available.]
+[2025-02-26 14:42:43,991: INFO: main: stageData Ingestion Stage initiated]
+[2025-02-26 14:42:43,993: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-26 14:42:43,993: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-26 14:42:43,993: INFO: common: created directories at: artifacts]
+[2025-02-26 14:42:43,993: INFO: common: created directories at: artifacts/data_ingestion]
+[2025-02-26 14:42:43,993: INFO: data_ingestion: File already exists]
+[2025-02-26 14:42:44,093: INFO: main: Stage Data Ingestion Stage Completed]
+[2025-02-26 14:42:44,093: INFO: main: stage Data Transformation Stage initiated]
+[2025-02-26 14:42:44,093: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-26 14:42:44,093: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-26 14:42:44,093: INFO: common: created directories at: artifacts]
+[2025-02-26 14:42:44,093: INFO: common: created directories at: artifacts/data_transformation]
+[2025-02-26 14:42:45,238: INFO: main: Stage Data Transformation Stage]
+[2025-02-26 14:42:45,238: INFO: main: stage Model Trainer Stage initiated]
+[2025-02-26 14:42:45,239: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-26 14:42:45,241: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-26 14:42:45,241: INFO: common: created directories at: artifacts]
+[2025-02-26 14:42:45,241: INFO: common: created directories at: artifacts/model_trainer]
+[2025-02-26 14:45:33,073: ERROR: main: Using the `Trainer` with `PyTorch` requires `accelerate>=0.26.0`: Please run `pip install transformers[torch]` or `pip install 'accelerate>=0.26.0'`]
+Traceback (most recent call last):
+  File "C:\Users\Sarthak\textsummarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\pipeline\model_trainer3.py", line 13, in initiate_model_trainer
+    model_trainer_config.train()
+  File "C:\Users\Sarthak\textsummarizer\src\textsummarizer\components\model_trainer.py", line 21, in train
+    trainer_args= TrainingArguments(
+                  ^^^^^^^^^^^^^^^^^^
+  File "<string>", line 134, in __init__
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\transformers\training_args.py", line 1791, in __post_init__
+    self.device
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\transformers\training_args.py", line 2313, in device
+    return self._setup_devices
+           ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\transformers\utils\generic.py", line 62, in __get__
+    cached = self.fget(obj)
+             ^^^^^^^^^^^^^^
+  File "c:\Users\Sarthak\textsummarizer\venv\Lib\site-packages\transformers\training_args.py", line 2186, in _setup_devices
+    raise ImportError(
+ImportError: Using the `Trainer` with `PyTorch` requires `accelerate>=0.26.0`: Please run `pip install transformers[torch]` or `pip install 'accelerate>=0.26.0'`
+[2025-02-26 14:55:37,563: INFO: config: PyTorch version 2.6.0 available.]
+[2025-02-26 14:55:38,390: INFO: main: stageData Ingestion Stage initiated]
+[2025-02-26 14:55:38,390: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-26 14:55:38,390: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-26 14:55:38,390: INFO: common: created directories at: artifacts]
+[2025-02-26 14:55:38,390: INFO: common: created directories at: artifacts/data_ingestion]
+[2025-02-26 14:55:38,390: INFO: data_ingestion: File already exists]
+[2025-02-26 14:55:38,496: INFO: main: Stage Data Ingestion Stage Completed]
+[2025-02-26 14:55:38,496: INFO: main: stage Data Transformation Stage initiated]
+[2025-02-26 14:55:38,496: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-26 14:55:38,496: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-26 14:55:38,496: INFO: common: created directories at: artifacts]
+[2025-02-26 14:55:38,496: INFO: common: created directories at: artifacts/data_transformation]
+[2025-02-26 14:55:39,846: INFO: main: Stage Data Transformation Stage]
+[2025-02-26 14:55:39,846: INFO: main: stage Model Trainer Stage initiated]
+[2025-02-26 14:55:39,848: INFO: common: Yaml file: config\config.yaml loaded successfully]
+[2025-02-26 14:55:39,849: INFO: common: Yaml file: params.yaml loaded successfully]
+[2025-02-26 14:55:39,849: INFO: common: created directories at: artifacts]
+[2025-02-26 14:55:39,850: INFO: common: created directories at: artifacts/model_trainer]
